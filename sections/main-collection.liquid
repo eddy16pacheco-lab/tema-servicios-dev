@@ -1,0 +1,22 @@
+<section class="block">
+  <div class="wrap">
+    <h1>{{ collection.title | default: 'Servicios' }}</h1>
+    <nav class="filters" aria-label="Categorías">
+      <a href="{{ collection.url }}"{% unless current_tags %} aria-current="true"{% endunless %}>Todos</a>
+      {% for tag in collection.all_tags %}
+        <a href="{{ collection.url }}/{{ tag | handle }}"{% if current_tags contains tag %} aria-current="true"{% endif %}>{{ tag }}</a>
+      {% endfor %}
+    </nav>
+    {% paginate collection.products by section.settings.per_page %}
+      <div class="grid grid--3">
+        {% for product in collection.products %}{% render 'service-card', product: product %}
+        {% else %}<p>No hay servicios en esta categoría todavía.</p>{% endfor %}
+      </div>
+      {% if paginate.pages > 1 %}{{ paginate | default_pagination }}{% endif %}
+    {% endpaginate %}
+  </div>
+</section>
+{% schema %}
+{ "name": "Catálogo de servicios",
+  "settings": [ { "type": "range", "id": "per_page", "label": "Servicios por página", "min": 6, "max": 24, "step": 3, "default": 12 } ] }
+{% endschema %}

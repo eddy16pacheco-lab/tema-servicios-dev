@@ -1,0 +1,19 @@
+{ "sections": {
+  "hero": { "type": "hero" },
+  "projects": { "type": "featured-projects", "blocks": {
+    "p1": { "type": "project", "settings": { "name": "AdminPyme", "description": "Sistema de gestión integral para pequeñas y medianas empresas.", "stack": "JavaScript · SQL", "url": "https://admin-pyme-online.vercel.app/" } },
+    "p2": { "type": "project", "settings": { "name": "BarbeApp", "description": "Gestión de citas, clientes, pagos en línea y fidelización para barberías.", "stack": "JavaScript · HTML/CSS · SQL", "url": "https://barbeapp.vercel.app/" } } },
+    "block_order": ["p1","p2"] },
+  "services": { "type": "services-grid", "blocks": {
+    "s1": { "type": "service", "settings": { "title": "Desarrollo web full stack", "text": "Sitios y aplicaciones con JavaScript, React y bases de datos SQL." } },
+    "s2": { "type": "service", "settings": { "title": "Sistemas de gestión a la medida", "text": "Control de ventas, inventario, citas y clientes para tu pyme." } },
+    "s3": { "type": "service", "settings": { "title": "Web apps", "text": "Aplicaciones web responsivas que funcionan en móvil y escritorio." } },
+    "s4": { "type": "service", "settings": { "title": "Mantenimiento y optimización", "text": "Correcciones, mejoras y soporte continuo para software existente." } } },
+    "block_order": ["s1","s2","s3","s4"] },
+  "tech": { "type": "tech-process", "blocks": {
+    "t1": { "type": "step", "settings": { "title": "Requerimientos", "text": "Entendemos cómo funciona tu negocio y qué necesitas resolver." } },
+    "t2": { "type": "step", "settings": { "title": "Modelo de datos", "text": "Diseñamos la base de datos antes de escribir la interfaz." } },
+    "t3": { "type": "step", "settings": { "title": "Implementación", "text": "Construimos por etapas, con entregas que puedes probar." } },
+    "t4": { "type": "step", "settings": { "title": "Entrega y soporte", "text": "Despliegue, documentación y ajustes posteriores." } } },
+    "block_order": ["t1","t2","t3","t4"] } },
+  "order": ["hero","projects","services","tech"] }

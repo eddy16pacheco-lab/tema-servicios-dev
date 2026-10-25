@@ -1,0 +1,4 @@
+[environments.development]
+store = "TU-TIENDA.myshopify.com"
+theme = "ID_DEL_TEMA_DE_DESARROLLO"
+ignore = ["config/settings_data.json"]

@@ -1,0 +1,35 @@
+<section class="block">
+  <div class="wrap product">
+    <div>
+      <h1>{{ product.title }}</h1>
+      <div class="rte">{{ product.description }}</div>
+      <p class="muted">Tiempo estimado de entrega: {{ product.metafields.custom.delivery_time | default: 'se define en la cotización' }}</p>
+    </div>
+    <aside class="card">
+      {% form 'product', product %}
+        {% unless product.has_only_default_variant %}
+          <label for="variant">Nivel del servicio</label>
+          <select id="variant" name="id">
+            {% for v in product.variants %}<option value="{{ v.id }}"{% unless v.available %} disabled{% endunless %}>{{ v.title }} · {{ v.price | money }}</option>{% endfor %}
+          </select>
+        {% else %}<input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">{% endunless %}
+        <p class="price">{{ product.price | money }}</p>
+        <button class="btn btn--primary" type="submit"{% unless product.available %} disabled{% endunless %}>Contratar este servicio</button>
+      {% endform %}
+      <p>{% render 'button', url: '/pages/contact', label: 'Solicitar presupuesto personalizado', style: 'ghost' %}</p>
+    </aside>
+  </div>
+  {% if section.blocks.size > 0 %}
+  <div class="wrap faq">
+    <h2>Preguntas frecuentes</h2>
+    {% for block in section.blocks %}
+      <details {{ block.shopify_attributes }}><summary>{{ block.settings.question }}</summary><p>{{ block.settings.answer }}</p></details>
+    {% endfor %}
+  </div>
+  {% endif %}
+</section>
+{% schema %}
+{ "name": "Detalle del servicio",
+  "blocks": [ { "type": "faq", "name": "Pregunta", "settings": [
+    { "type": "text", "id": "question", "label": "Pregunta" }, { "type": "textarea", "id": "answer", "label": "Respuesta" } ] } ] }
+{% endschema %}

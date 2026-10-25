@@ -1,0 +1,16 @@
+<section class="block"><div class="wrap narrow">
+  <h1>Tu carrito</h1>
+  {% if cart.item_count == 0 %}
+    <p>Tu carrito está vacío.</p>{% render 'button', url: '/collections/all', label: 'Ver servicios' %}
+  {% else %}
+    <form action="{{ routes.cart_url }}" method="post">
+      {% for item in cart.items %}
+        <div class="card cart-line"><strong>{{ item.product.title }}</strong> <span class="muted">{{ item.variant.title }}</span>
+          <span>{{ item.final_line_price | money }}</span><a href="{{ item.url_to_remove }}">Quitar</a></div>
+      {% endfor %}
+      <p class="price">Total: {{ cart.total_price | money }}</p>
+      <button class="btn btn--primary" name="checkout" type="submit">Ir a pagar</button>
+    </form>
+  {% endif %}
+</div></section>
+{% schema %}{ "name": "Carrito" }{% endschema %}

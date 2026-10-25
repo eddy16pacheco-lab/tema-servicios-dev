@@ -1,0 +1,4 @@
+{%- comment -%} Uso: {% render 'button', url: '/pages/contact', label: 'Cotizar proyecto', style: 'primary' %} {%- endcomment -%}
+{%- if url != blank and label != blank -%}
+  <a class="btn btn--{{ style | default: 'primary' }}" href="{{ url }}"{% if url contains 'http' %} target="_blank" rel="noopener"{% endif %}>{{ label }}</a>
+{%- endif -%}

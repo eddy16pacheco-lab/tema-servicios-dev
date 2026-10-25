@@ -1,0 +1,29 @@
+<section class="block" id="proyectos">
+  <div class="wrap">
+    <h2>{{ section.settings.heading }}</h2>
+    <div class="grid grid--2">
+      {% for block in section.blocks %}
+        <article class="card" {{ block.shopify_attributes }}>
+          {% if block.settings.image %}{{ block.settings.image | image_url: width: 800 | image_tag: loading: 'lazy' }}{% endif %}
+          <h3>{{ block.settings.name }}</h3>
+          <p class="muted">{{ block.settings.description }}</p>
+          <p class="stack">{{ block.settings.stack }}</p>
+          {% render 'button', url: block.settings.url, label: 'Ver demo en vivo', style: 'ghost' %}
+        </article>
+      {% endfor %}
+    </div>
+    <p>{% render 'button', url: settings.url_portfolio, label: 'Ver portafolio completo', style: 'ghost' %}</p>
+  </div>
+</section>
+{% schema %}
+{ "name": "Casos de éxito",
+  "settings": [ { "type": "text", "id": "heading", "label": "Título", "default": "Proyectos que ya están en línea" } ],
+  "blocks": [ { "type": "project", "name": "Proyecto", "settings": [
+      { "type": "image_picker", "id": "image", "label": "Captura" },
+      { "type": "text", "id": "name", "label": "Nombre", "default": "AdminPyme" },
+      { "type": "textarea", "id": "description", "label": "Descripción", "default": "Sistema de gestión integral para pequeñas y medianas empresas." },
+      { "type": "text", "id": "stack", "label": "Tecnologías", "default": "JavaScript · SQL" },
+      { "type": "url", "id": "url", "label": "URL del despliegue" } ] } ],
+  "max_blocks": 6,
+  "presets": [ { "name": "Casos de éxito", "blocks": [ { "type": "project" }, { "type": "project" } ] } ] }
+{% endschema %}

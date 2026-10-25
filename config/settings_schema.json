@@ -1,0 +1,18 @@
+[
+  { "name": "theme_info", "theme_name": "Servicios Dev", "theme_version": "1.0.0", "theme_author": "Eddy Pacheco" },
+  { "name": "Colores", "settings": [
+    { "type": "select", "id": "color_mode", "label": "Modo", "default": "dark", "options": [ { "value": "dark", "label": "Oscuro" }, { "value": "light", "label": "Claro" } ] },
+    { "type": "color", "id": "color_bg", "label": "Fondo", "default": "#0c1417" },
+    { "type": "color", "id": "color_surface", "label": "Superficie de tarjetas", "default": "#142126" },
+    { "type": "color", "id": "color_text", "label": "Texto", "default": "#e8f1ef" },
+    { "type": "color", "id": "color_muted", "label": "Texto secundario", "default": "#9ab0ad" },
+    { "type": "color", "id": "color_accent", "label": "Acento (esmeralda)", "default": "#2ee6a6" },
+    { "type": "color", "id": "color_accent_ink", "label": "Texto sobre el acento", "default": "#062018" } ] },
+  { "name": "Tipografía", "settings": [
+    { "type": "text", "id": "font_heading", "label": "Fuente de títulos (Google Fonts)", "default": "'Bricolage Grotesque'" },
+    { "type": "text", "id": "font_body", "label": "Fuente de texto", "default": "'IBM Plex Sans'" } ] },
+  { "name": "Enlaces y contacto", "settings": [
+    { "type": "url", "id": "url_portfolio", "label": "Portafolio", "default": "https://portafolio-web-five-rust.vercel.app/" },
+    { "type": "url", "id": "url_github", "label": "Perfil de GitHub" },
+    { "type": "text", "id": "contact_email", "label": "Correo de contacto", "default": "eddy16pacheco@gmail.com" } ] }
+]

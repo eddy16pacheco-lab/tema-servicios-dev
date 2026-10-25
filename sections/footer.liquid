@@ -1,0 +1,15 @@
+<footer class="site-footer">
+  <div class="wrap">
+    <p>{{ section.settings.text }}</p>
+    <p>
+      {% if settings.url_portfolio != blank %}<a href="{{ settings.url_portfolio }}" target="_blank" rel="noopener">Portafolio</a>{% endif %}
+      {% if settings.url_github != blank %}<a href="{{ settings.url_github }}" target="_blank" rel="noopener">GitHub</a>{% endif %}
+      {% if settings.contact_email != blank %}<a href="mailto:{{ settings.contact_email }}">{{ settings.contact_email }}</a>{% endif %}
+    </p>
+    <p class="muted">© {{ 'now' | date: '%Y' }} {{ shop.name }}</p>
+  </div>
+</footer>
+{% schema %}
+{ "name": "Pie de página",
+  "settings": [ { "type": "textarea", "id": "text", "label": "Texto", "default": "Software a la medida para pymes y emprendedores." } ] }
+{% endschema %}

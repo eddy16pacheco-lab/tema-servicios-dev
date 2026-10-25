@@ -1,0 +1,25 @@
+<section class="block block--alt">
+  <div class="wrap">
+    <h2>{{ section.settings.heading }}</h2>
+    <div class="grid grid--4">
+      {% for block in section.blocks %}
+        <article class="card" {{ block.shopify_attributes }}>
+          <h3>{{ block.settings.title }}</h3>
+          <p class="muted">{{ block.settings.text }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% schema %}
+{ "name": "Servicios",
+  "settings": [ { "type": "text", "id": "heading", "label": "Título", "default": "Qué puedo construir para ti" } ],
+  "blocks": [ { "type": "service", "name": "Servicio", "settings": [
+      { "type": "text", "id": "title", "label": "Título", "default": "Desarrollo web" },
+      { "type": "textarea", "id": "text", "label": "Texto" } ] } ],
+  "presets": [ { "name": "Servicios", "blocks": [
+    { "type": "service", "settings": { "title": "Desarrollo web full stack", "text": "Sitios y aplicaciones con JavaScript, React y bases de datos SQL." } },
+    { "type": "service", "settings": { "title": "Sistemas de gestión a la medida", "text": "Control de ventas, inventario, citas y clientes para tu pyme." } },
+    { "type": "service", "settings": { "title": "Web apps", "text": "Aplicaciones web responsivas que funcionan en móvil y escritorio." } },
+    { "type": "service", "settings": { "title": "Mantenimiento y optimización", "text": "Correcciones, mejoras y soporte continuo para software existente." } } ] } ] }
+{% endschema %}

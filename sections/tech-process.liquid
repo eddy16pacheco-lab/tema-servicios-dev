@@ -1,0 +1,25 @@
+<section class="block">
+  <div class="wrap">
+    <h2>{{ section.settings.tech_heading }}</h2>
+    <ul class="chips">{% assign techs = section.settings.techs | split: ',' %}{% for t in techs %}<li>{{ t | strip }}</li>{% endfor %}</ul>
+    <h2>{{ section.settings.process_heading }}</h2>
+    <ol class="steps">
+      {% for block in section.blocks %}<li {{ block.shopify_attributes }}><strong>{{ block.settings.title }}</strong><span class="muted">{{ block.settings.text }}</span></li>{% endfor %}
+    </ol>
+  </div>
+</section>
+{% schema %}
+{ "name": "Tecnologías y proceso",
+  "settings": [
+    { "type": "text", "id": "tech_heading", "label": "Título tecnologías", "default": "Tecnologías con las que trabajo" },
+    { "type": "text", "id": "techs", "label": "Lista separada por comas", "default": "JavaScript, React.js, HTML5, CSS3, Java, Python, MySQL, MariaDB, Git, GitHub" },
+    { "type": "text", "id": "process_heading", "label": "Título proceso", "default": "Cómo trabajamos" }
+  ],
+  "blocks": [ { "type": "step", "name": "Paso", "settings": [
+    { "type": "text", "id": "title", "label": "Título" }, { "type": "textarea", "id": "text", "label": "Texto" } ] } ],
+  "presets": [ { "name": "Tecnologías y proceso", "blocks": [
+    { "type": "step", "settings": { "title": "Requerimientos", "text": "Entendemos cómo funciona tu negocio y qué necesitas resolver." } },
+    { "type": "step", "settings": { "title": "Modelo de datos", "text": "Diseñamos la base de datos antes de escribir la interfaz." } },
+    { "type": "step", "settings": { "title": "Implementación", "text": "Construimos por etapas, con entregas que puedes probar." } },
+    { "type": "step", "settings": { "title": "Entrega y soporte", "text": "Despliegue, documentación y ajustes posteriores." } } ] } ] }
+{% endschema %}

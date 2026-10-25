@@ -1,0 +1,27 @@
+<section class="block">
+  <div class="wrap narrow">
+    <h1>{{ section.settings.heading }}</h1>
+    {% form 'contact', id: 'quote-form' %}
+      {% if form.posted_successfully? %}<p class="notice" role="status">Mensaje enviado. Te responderé con una propuesta en los próximos días.</p>{% endif %}
+      {% if form.errors %}<p class="notice notice--error" role="alert">Revisa los campos marcados e inténtalo de nuevo.</p>{% endif %}
+      <label for="f-name">Nombre</label><input id="f-name" name="contact[name]" required autocomplete="name">
+      <label for="f-company">Empresa</label><input id="f-company" name="contact[Empresa]">
+      <label for="f-email">Correo electrónico</label><input id="f-email" type="email" name="contact[email]" required autocomplete="email">
+      <label for="f-type">Tipo de proyecto</label>
+      <select id="f-type" name="contact[Tipo de proyecto]">
+        <option>Desarrollo web</option><option>Sistema de gestión</option><option>Consultoría</option><option>Automatización</option><option>Mantenimiento</option>
+      </select>
+      <label for="f-budget">Presupuesto estimado</label>
+      <select id="f-budget" name="contact[Presupuesto]"><option>Aún no lo sé</option><option>Menos de $500</option><option>$500 a $1.500</option><option>Más de $1.500</option></select>
+      <label for="f-tech">Tecnologías requeridas</label><input id="f-tech" name="contact[Tecnologías]" placeholder="Ej.: React, MySQL">
+      <label for="f-body">Cuéntame qué necesitas</label><textarea id="f-body" name="contact[body]" rows="6" required></textarea>
+      <p><button class="btn btn--primary" type="submit">Enviar solicitud</button></p>
+    {% endform %}
+    <p>{% render 'button', url: settings.url_portfolio, label: 'Ver mi portafolio antes de escribir', style: 'ghost' %}</p>
+  </div>
+</section>
+{% schema %}
+{ "name": "Formulario de cotización",
+  "settings": [ { "type": "text", "id": "heading", "label": "Título", "default": "Cuéntame tu proyecto" } ],
+  "presets": [ { "name": "Formulario de cotización" } ] }
+{% endschema %}

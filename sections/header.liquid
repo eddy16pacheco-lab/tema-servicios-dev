@@ -1,0 +1,21 @@
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="{{ routes.root_url }}">{{ shop.name }}</a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="nav">Menú</button>
+    <nav id="nav" aria-label="Principal">
+      {% for link in linklists[section.settings.menu].links %}
+        <a href="{{ link.url }}"{% if link.active %} aria-current="page"{% endif %}>{{ link.title }}</a>
+      {% endfor %}
+      <a href="{{ routes.cart_url }}">Carrito ({{ cart.item_count }})</a>
+    </nav>
+    {% render 'button', url: section.settings.cta_url, label: section.settings.cta_label %}
+  </div>
+</header>
+{% schema %}
+{ "name": "Encabezado",
+  "settings": [
+    { "type": "link_list", "id": "menu", "label": "Menú", "default": "main-menu" },
+    { "type": "text", "id": "cta_label", "label": "Texto del botón", "default": "Cotizar proyecto" },
+    { "type": "url", "id": "cta_url", "label": "Enlace del botón" }
+  ] }
+{% endschema %}
