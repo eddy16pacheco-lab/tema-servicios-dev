@@ -1,14 +1,12 @@
-# Servicios Dev: tema Shopify para venta de servicios de software
+# Sitio de Eddy Pacheco
 
-## Conectar con GitHub
-1. `git init && git add . && git commit -m "Tema inicial"` y sube el repositorio a GitHub.
-2. Shopify Admin > Tienda online > Temas > Agregar tema > **Conectar desde GitHub**. Cada push a la rama elegida se sincroniza.
-3. Desarrollo local: `npm i -g @shopify/cli` y luego `shopify theme dev --store TU-TIENDA.myshopify.com`.
+Sitio estático: `index.html`, `styles.css`, `script.js` y `assets/`.
 
-## Configuración en Shopify
-- Crea el menú `main-menu` (Inicio, Servicios, Contacto).
-- Crea la página "Contacto" con la plantilla `page.contact`.
-- Productos = servicios. Etiqueta `cotizacion` para mostrar "Precio bajo cotización". Las demás etiquetas funcionan como categorías del catálogo.
-- Variantes del producto = niveles (Básico, Avanzado, Enterprise).
-- Metacampo opcional `custom.delivery_time` (texto) para el tiempo de entrega.
-- Colores, tipografías y enlaces a Vercel se editan en Personalizar > Configuración del tema.
+- Foto: guarda tu retrato como `assets/foto.jpg` (si no existe, se muestran tus iniciales).
+- CV: `assets/CV_Eddy_Pacheco.pdf`.
+- Prueba local: abre `index.html` o ejecuta `npx serve .`
+
+## Despliegue
+- **Vercel:** `npx vercel` dentro de esta carpeta, o importa el repositorio de GitHub (sin configuración de build).
+- **Netlify:** arrastra la carpeta a app.netlify.com/drop.
+- **GitHub Pages:** sube los archivos y activa Pages en Settings > Pages.

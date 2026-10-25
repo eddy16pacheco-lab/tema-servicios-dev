@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Eddy Pacheco | Desarrollador de Software Junior</title>
+  <meta name="description" content="Eddy Pacheco, Ingeniero en Informática y desarrollador junior: desarrollo web, React.js, bases de datos relacionales e IA aplicada. Sistemas de gestión a la medida.">
+  <meta name="theme-color" content="#0b0f19">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="#inicio" aria-label="Inicio"><span class="c-a">&gt;_ eddy</span> <span class="dim">@</span> <span class="c-v">pacheco</span> <span class="dim">:~$</span> <span class="cursor" aria-hidden="true"></span></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="nav">Menú</button>
+    <nav id="nav" aria-label="Principal">
+      <a href="#inicio">Inicio</a><a href="#sobre-mi">Sobre mí</a><a href="#proyectos">Proyectos</a>
+      <a href="#servicios">Servicios</a><a href="#experiencia">Experiencia</a><a href="#contacto">Contacto</a>
+    </nav>
+    <a class="btn btn--outline" href="#contacto">Contrátame</a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="inicio">
+    <div class="wrap hero__grid">
+      <div>
+        <h1>Hola, soy <span class="grad">Eddy Pacheco</span></h1>
+        <p class="role">Ingeniero en Informática | Desarrollador de Software Junior</p>
+        <p class="quote">“Si tienes una gran idea, ven y hablemos; la crearemos juntos.”</p>
+        <p class="specialty"><span class="muted">Especialidad:</span> Desarrollo Web · Bases de Datos Relacionales · IA Aplicada</p>
+        <p class="loc"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Acevedo, Miranda, Venezuela</p>
+        <div class="actions">
+          <a class="btn btn--primary" href="#proyectos">Ver proyectos</a>
+          <a class="btn btn--outline" href="assets/CV_Eddy_Pacheco.pdf" download>Descargar CV (PDF)</a>
+        </div>
+        <ul class="stats">
+          <li class="stat"><strong class="grad">3+</strong><span>Proyectos reales</span></li>
+          <li class="stat"><strong class="grad">1+</strong><span>Año de experiencia</span></li>
+          <li class="stat"><strong class="grad">15+</strong><span>Tecnologías</span></li>
+          <li class="stat"><strong class="grad">2</strong><span>Idiomas</span></li>
+        </ul>
+      </div>
+      <div class="hero__visual">
+        <span class="shape shape--a" aria-hidden="true"></span><span class="shape shape--b" aria-hidden="true"></span>
+        <div class="photo">
+          <span class="photo__fallback" aria-hidden="true">EP</span>
+          <img src="assets/foto.jpg" alt="Retrato de Eddy Pacheco" width="600" height="750" onerror="this.remove()">
+        </div>
+        <span class="chip chip--1" aria-hidden="true">{ react: true }</span>
+        <span class="chip chip--2" aria-hidden="true">&lt;/&gt;</span>
+        <span class="chip chip--3" aria-hidden="true">SELECT * FROM proyectos;</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="sobre-mi">
+    <div class="wrap about">
+      <div>
+        <h2>Sobre mí</h2>
+        <p>Soy Ingeniero en Informática y desarrollador junior enfocado en desarrollo web (JavaScript, React.js, HTML5 y CSS3) y bases de datos relacionales (SQL, MySQL, MariaDB).</p>
+        <p>He construido proyectos completos: levanto los requerimientos, diseño el modelo de datos e implemento la solución. Entre ellos está un sistema interno de gestión que desarrollé durante mi experiencia como tutor en un Centro Bolivariano de Informática y Telemática (CBIT) de Fundabit.</p>
+        <p>Uso ChatGPT, Claude, Gemini, DeepSeek, Copilot y Perplexity para desarrollar, depurar, documentar y aprender, y valido siempre los resultados con criterio propio. Manejo Git y GitHub para el control de versiones y el trabajo colaborativo.</p>
+      </div>
+      <aside class="card">
+        <h3>Formación</h3>
+        <ul class="plain">
+          <li><strong>Ingeniero en Informática (2025)</strong><span class="muted">Univ. Politécnica Territorial de Barlovento "Argelia Laya"</span></li>
+          <li><strong>Bachiller en Ciencias (2022)</strong><span class="muted">U.E.E. "Argelia Laya"</span></li>
+        </ul>
+        <h3>Idiomas</h3>
+        <p class="muted">Español (nativo) · Inglés (intermedio)</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="block block--alt" id="proyectos">
+    <div class="wrap">
+      <h2>Proyectos</h2>
+      <div class="grid grid--2">
+        <article class="card">
+          <h3>AdminPyme</h3>
+          <p class="muted">Sistema de gestión integral para pequeñas y medianas empresas.</p>
+          <p class="tag">Aplicación web en producción</p>
+          <a class="btn btn--ghost" href="https://admin-pyme-online.vercel.app/" target="_blank" rel="noopener">Ver demo en vivo</a>
+        </article>
+        <article class="card">
+          <h3>BarbApp</h3>
+          <p class="muted">Sistema de gestión integral para barberías: administración de citas, gestión de clientes, elección de barbero, pagos en línea con Pago Móvil y programas de fidelización. Interfaz en tonos oscuros pensada para la experiencia del usuario.</p>
+          <p class="tag">JavaScript · HTML/CSS · SQL</p>
+          <a class="btn btn--ghost" href="https://barbeapp.vercel.app/" target="_blank" rel="noopener">Ver demo en vivo</a>
+        </article>
+        <article class="card">
+          <h3>VenCom Manager</h3>
+          <p class="muted">Sistema web para vendedores de ferias libres, food trucks y pequeños comerciantes. Lleva un control simple de ventas, inventario y movimientos del negocio, sin necesidad de conocimientos contables. Nació de un levantamiento de requerimientos centrado en sus necesidades reales.</p>
+          <p class="tag">Aplicación web · Base de datos relacional</p>
+        </article>
+        <article class="card">
+          <h3>CBIT Manager</h3>
+          <p class="muted">Sistema integral de gestión administrativa creado en el CBIT de Fundabit. Digitaliza el registro de usuarios, el control de actividades y la información institucional, y reemplaza procesos manuales por un flujo ordenado respaldado en una base de datos relacional.</p>
+          <p class="tag">Aplicación web · Base de datos relacional</p>
+        </article>
+      </div>
+      <p><a class="btn btn--ghost" href="https://portafolio-web-five-rust.vercel.app/" target="_blank" rel="noopener">Ver portafolio completo</a></p>
+    </div>
+  </section>
+
+  <section class="block" id="servicios">
+    <div class="wrap">
+      <h2>Qué puedo construir para ti</h2>
+      <div class="grid grid--4">
+        <article class="card"><h3>Desarrollo web full stack</h3><p class="muted">Sitios y aplicaciones con JavaScript, React.js, HTML5, CSS3 y bases de datos SQL.</p></article>
+        <article class="card"><h3>Sistemas de gestión a la medida</h3><p class="muted">Control de ventas, inventario, citas, clientes y procesos administrativos para pymes.</p></article>
+        <article class="card"><h3>Diseño de bases de datos</h3><p class="muted">Modelado de bases de datos relacionales en MySQL y MariaDB, con consultas SQL.</p></article>
+        <article class="card"><h3>Levantamiento de requerimientos</h3><p class="muted">Entiendo cómo trabaja tu negocio y lo convierto en una especificación clara antes de programar.</p></article>
+      </div>
+      <p><a class="btn btn--primary" href="#contacto" data-service="">Cotizar proyecto</a></p>
+    </div>
+  </section>
+
+  <section class="block block--alt" id="habilidades">
+    <div class="wrap">
+      <h2>Habilidades</h2>
+      <div class="grid grid--3">
+        <article class="card"><h3>Técnicas</h3><ul class="chips"><li>JavaScript</li><li>React.js</li><li>HTML5</li><li>CSS3</li><li>Java</li><li>Python</li><li>SQL</li><li>MySQL</li><li>MariaDB</li><li>Modelado de bases de datos</li><li>Git</li><li>GitHub</li><li>VS Code</li><li>Apache NetBeans</li><li>MySQL Workbench</li></ul></article>
+        <article class="card"><h3>Inteligencia artificial</h3><ul class="chips"><li>ChatGPT</li><li>Claude</li><li>Gemini</li><li>DeepSeek</li><li>Microsoft Copilot</li><li>Perplexity</li><li>Ingeniería de prompts</li></ul><p class="muted">Para generar y revisar código, depurar, escribir consultas SQL, documentar y prototipar, verificando cada respuesta antes de integrarla.</p></article>
+        <article class="card"><h3>Blandas</h3><ul class="chips"><li>Resolución de problemas</li><li>Adaptabilidad</li><li>Creatividad</li><li>Responsabilidad</li><li>Levantamiento de requerimientos</li><li>Aprendizaje continuo</li><li>Trabajo en equipo</li></ul></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="experiencia">
+    <div class="wrap narrow-lg">
+      <h2>Experiencia laboral</h2>
+      <article class="card">
+        <h3>Tutor de CBIT</h3>
+        <p class="muted">Fundabit · 1 año</p>
+        <ul class="list">
+          <li>Impartí formación en informática y uso de tecnología a la comunidad, apoyando el programa nacional de alfabetización tecnológica de Fundabit.</li>
+          <li>Participé en la creación de CBIT Manager, un sistema interno con base de datos relacional para digitalizar y ordenar la gestión administrativa del centro.</li>
+          <li>Brindé soporte técnico básico y acompañamiento a usuarios en el uso de equipos y herramientas informáticas.</li>
+          <li>Apliqué herramientas de IA generativa para preparar material formativo y resolver dudas técnicas.</li>
+        </ul>
+      </article>
+      <h2>Cómo trabajo</h2>
+      <ol class="steps">
+        <li><strong>Requerimientos.</strong> Entiendo cómo funciona tu negocio y qué necesitas resolver.</li>
+        <li><strong>Modelo de datos.</strong> Diseño la base de datos relacional antes de construir la interfaz.</li>
+        <li><strong>Implementación.</strong> Construyo una solución funcional, con ayuda de IA y revisión propia.</li>
+        <li><strong>Entrega.</strong> Despliegue y acompañamiento para que tu equipo pueda usarla.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="block block--alt" id="contacto">
+    <div class="wrap contact">
+      <div>
+        <h2>Hablemos de tu proyecto</h2>
+        <p class="muted">Cuéntame qué necesitas resolver y te respondo con una propuesta.</p>
+        <p><a href="mailto:eddy16pacheco@gmail.com">eddy16pacheco@gmail.com</a><br><a href="tel:+584269154122">+58 426-915-4122</a><br><span class="muted">Acevedo, Miranda, Venezuela</span></p>
+        <p><a class="btn btn--ghost" href="https://wa.me/584269154122" target="_blank" rel="noopener">Escribir por WhatsApp</a></p>
+      </div>
+      <form id="quote-form" class="card" novalidate>
+        <label for="f-name">Nombre</label><input id="f-name" required autocomplete="name">
+        <label for="f-company">Empresa (opcional)</label><input id="f-company">
+        <label for="f-type">Tipo de proyecto</label>
+        <select id="f-type"><option>Desarrollo web</option><option>Sistema de gestión</option><option>Base de datos</option><option>Mantenimiento</option><option>Otro</option></select>
+        <label for="f-budget">Presupuesto estimado</label>
+        <select id="f-budget"><option>Aún no lo sé</option><option>Menos de $500</option><option>$500 a $1.500</option><option>Más de $1.500</option></select>
+        <label for="f-tech">Tecnologías requeridas</label><input id="f-tech" placeholder="Ej.: React, MySQL">
+        <label for="f-msg">Cuéntame qué necesitas</label><textarea id="f-msg" rows="5" required></textarea>
+        <p id="form-msg" class="notice" role="status" hidden></p>
+        <button class="btn btn--primary" type="submit">Enviar solicitud</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="muted">© <span id="year"></span> Eddy Pacheco · Ingeniero en Informática</p>
+    <p><a href="https://portafolio-web-five-rust.vercel.app/" target="_blank" rel="noopener">Portafolio</a>
+       <a href="https://admin-pyme-online.vercel.app/" target="_blank" rel="noopener">AdminPyme</a>
+       <a href="https://barbeapp.vercel.app/" target="_blank" rel="noopener">BarbApp</a>
+       <a href="assets/CV_Eddy_Pacheco.pdf" download>CV</a></p>
+  </div>
+</footer>
+<script src="script.js" defer></script>
+</body>
+</html>
