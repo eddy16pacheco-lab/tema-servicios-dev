@@ -8,11 +8,11 @@
         {% render 'button', url: section.settings.btn2_url, label: section.settings.btn2_label, style: 'ghost' %}
       </div>
     </div>
-    <pre class="hero__code" aria-hidden="true"><code>const proyecto = {
-  requerimientos: "claros",
-  base_de_datos: "relacional",
-  entrega: "funcionando",
-};</code></pre>
+    <div class="hero__card card">
+      <h2>{{ section.settings.name }}</h2>
+      <p class="muted">{{ section.settings.role }}</p>
+      <ul class="chips">{% assign tags = section.settings.tags | split: ',' %}{% for t in tags %}<li>{{ t | strip }}</li>{% endfor %}</ul>
+    </div>
   </div>
 </section>
 {% schema %}
@@ -20,6 +20,9 @@
   "settings": [
     { "type": "text", "id": "title", "label": "Titular", "default": "Software a la medida que tu negocio puede usar desde el primer día" },
     { "type": "textarea", "id": "subtitle", "label": "Subtítulo", "default": "Sistemas de gestión y aplicaciones web para pymes: desde el levantamiento de requerimientos hasta la entrega." },
+    { "type": "text", "id": "name", "label": "Nombre", "default": "Eddy Pacheco" },
+    { "type": "text", "id": "role", "label": "Cargo", "default": "Ingeniero en Informática · Desarrollador de Software Junior" },
+    { "type": "text", "id": "tags", "label": "Etiquetas separadas por comas", "default": "Desarrollo web, React.js, Bases de datos relacionales, IA aplicada al desarrollo" },
     { "type": "text", "id": "btn1_label", "label": "Botón 1", "default": "Cotizar servicio" },
     { "type": "url", "id": "btn1_url", "label": "Enlace botón 1" },
     { "type": "text", "id": "btn2_label", "label": "Botón 2", "default": "Ver proyectos" },

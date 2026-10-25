@@ -43,3 +43,11 @@ input,select,textarea{width:100%;padding:.7rem;background:var(--surface);color:v
 }
 @media (max-width:520px){.grid--4{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:2rem;align-items:start}
+.plain{list-style:none;padding:0;margin:0 0 1rem}.plain li{margin-bottom:.8rem}.plain span{display:block}
+.narrow-lg{max-width:820px}.job ul{padding-left:1.1rem}.job li{margin-bottom:.4rem}
+.hero__card h2{margin-top:0}
+.strip{display:flex;gap:2rem;justify-content:space-between;align-items:center;flex-wrap:wrap}
+.rte p{max-width:68ch}
+@media (max-width:860px){.about{grid-template-columns:1fr}}

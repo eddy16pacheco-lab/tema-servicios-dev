@@ -1,0 +1,23 @@
+<section class="block block--alt" id="habilidades">
+  <div class="wrap">
+    <h2>{{ section.settings.heading }}</h2>
+    <div class="grid grid--2">
+      {% for block in section.blocks %}
+        <article class="card" {{ block.shopify_attributes }}>
+          <h3>{{ block.settings.title }}</h3>
+          <ul class="chips">{% assign items = block.settings.items | split: ',' %}{% for i in items %}<li>{{ i | strip }}</li>{% endfor %}</ul>
+          {% if block.settings.note != blank %}<p class="muted">{{ block.settings.note }}</p>{% endif %}
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% schema %}
+{ "name": "Habilidades",
+  "settings": [ { "type": "text", "id": "heading", "label": "Título", "default": "Habilidades" } ],
+  "blocks": [ { "type": "group", "name": "Grupo", "settings": [
+    { "type": "text", "id": "title", "label": "Título" },
+    { "type": "textarea", "id": "items", "label": "Elementos separados por comas" },
+    { "type": "textarea", "id": "note", "label": "Nota opcional" } ] } ],
+  "presets": [ { "name": "Habilidades" } ] }
+{% endschema %}

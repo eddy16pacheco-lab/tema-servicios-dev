@@ -14,5 +14,6 @@
   { "name": "Enlaces y contacto", "settings": [
     { "type": "url", "id": "url_portfolio", "label": "Portafolio", "default": "https://portafolio-web-five-rust.vercel.app/" },
     { "type": "url", "id": "url_github", "label": "Perfil de GitHub" },
+    { "type": "text", "id": "contact_phone", "label": "Teléfono / WhatsApp", "default": "+58 426-915-4122" },
     { "type": "text", "id": "contact_email", "label": "Correo de contacto", "default": "eddy16pacheco@gmail.com" } ] }
 ]

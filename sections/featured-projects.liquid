@@ -8,7 +8,7 @@
           <h3>{{ block.settings.name }}</h3>
           <p class="muted">{{ block.settings.description }}</p>
           <p class="stack">{{ block.settings.stack }}</p>
-          {% render 'button', url: block.settings.url, label: 'Ver demo en vivo', style: 'ghost' %}
+          {% if block.settings.url != blank %}{% render 'button', url: block.settings.url, label: 'Ver demo en vivo', style: 'ghost' %}{% else %}<p class="muted">Sistema interno, sin demo pública.</p>{% endif %}
         </article>
       {% endfor %}
     </div>

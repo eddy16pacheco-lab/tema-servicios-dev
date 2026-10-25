@@ -1,0 +1,23 @@
+<section class="block block--alt" id="contacto">
+  <div class="wrap strip">
+    <div>
+      <h2>{{ section.settings.heading }}</h2>
+      <p class="muted">{{ section.settings.text }}</p>
+      <p>
+        {% if settings.contact_email != blank %}<a href="mailto:{{ settings.contact_email }}">{{ settings.contact_email }}</a><br>{% endif %}
+        {% if settings.contact_phone != blank %}<a href="tel:{{ settings.contact_phone | remove: ' ' | remove: '-' }}">{{ settings.contact_phone }}</a>{% endif %}
+      </p>
+    </div>
+    <div class="actions">
+      {% render 'button', url: '/pages/contact', label: 'Cotizar proyecto' %}
+      {% render 'button', url: settings.url_portfolio, label: 'Ver portafolio', style: 'ghost' %}
+    </div>
+  </div>
+</section>
+{% schema %}
+{ "name": "Contacto directo",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Título", "default": "Hablemos de tu proyecto" },
+    { "type": "textarea", "id": "text", "label": "Texto", "default": "Cuéntame qué necesitas resolver y te respondo con una propuesta." } ],
+  "presets": [ { "name": "Contacto directo" } ] }
+{% endschema %}
