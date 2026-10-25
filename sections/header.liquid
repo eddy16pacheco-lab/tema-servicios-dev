@@ -1,21 +1,31 @@
 <header class="site-header">
   <div class="wrap bar">
-    <a class="brand" href="{{ routes.root_url }}">{{ shop.name }}</a>
+    <a class="brand" href="{{ routes.root_url }}" aria-label="{{ shop.name }}">
+      <span class="c-a">&gt;_</span> <span class="c-a">{{ section.settings.user }}</span> <span class="dim">@</span> <span class="c-v">{{ section.settings.host }}</span> <span class="dim">:~$</span> <span class="cursor" aria-hidden="true"></span>
+    </a>
     <button class="menu-toggle" aria-expanded="false" aria-controls="nav">Menú</button>
     <nav id="nav" aria-label="Principal">
-      {% for link in linklists[section.settings.menu].links %}
-        <a href="{{ link.url }}"{% if link.active %} aria-current="page"{% endif %}>{{ link.title }}</a>
-      {% endfor %}
+      {% for block in section.blocks %}<a href="{{ block.settings.url }}" {{ block.shopify_attributes }}>{{ block.settings.label }}</a>{% endfor %}
       <a href="{{ routes.cart_url }}">Carrito ({{ cart.item_count }})</a>
     </nav>
-    {% render 'button', url: section.settings.cta_url, label: section.settings.cta_label %}
+    {% render 'button', url: section.settings.cta_url, label: section.settings.cta_label, style: 'outline' %}
   </div>
 </header>
 {% schema %}
 { "name": "Encabezado",
   "settings": [
-    { "type": "link_list", "id": "menu", "label": "Menú", "default": "main-menu" },
-    { "type": "text", "id": "cta_label", "label": "Texto del botón", "default": "Cotizar proyecto" },
+    { "type": "text", "id": "user", "label": "Marca: usuario", "default": "eddy" },
+    { "type": "text", "id": "host", "label": "Marca: host", "default": "pacheco" },
+    { "type": "text", "id": "cta_label", "label": "Texto del botón", "default": "Contrátame" },
     { "type": "url", "id": "cta_url", "label": "Enlace del botón" }
-  ] }
+  ],
+  "blocks": [ { "type": "link", "name": "Enlace", "settings": [
+    { "type": "text", "id": "label", "label": "Texto" }, { "type": "text", "id": "url", "label": "URL" } ] } ],
+  "default": { "settings": { "cta_url": "/pages/contact" }, "blocks": [
+    { "type": "link", "settings": { "label": "Inicio", "url": "/" } },
+    { "type": "link", "settings": { "label": "Sobre mí", "url": "/#sobre-mi" } },
+    { "type": "link", "settings": { "label": "Proyectos", "url": "/#proyectos" } },
+    { "type": "link", "settings": { "label": "Experiencia", "url": "/#experiencia" } },
+    { "type": "link", "settings": { "label": "Servicios", "url": "/collections/all" } },
+    { "type": "link", "settings": { "label": "Contacto", "url": "/pages/contact" } } ] } }
 {% endschema %}

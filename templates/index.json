@@ -1,40 +1,265 @@
-{ "sections": {
-  "hero": { "type": "hero", "settings": {
-    "title": "Software a la medida para que tu negocio deje los procesos manuales",
-    "subtitle": "Sistemas de gestión y aplicaciones web con bases de datos relacionales, desde el levantamiento de requerimientos hasta la entrega. Uso herramientas de IA para acelerar el trabajo y reviso cada resultado con criterio propio.",
-    "btn1_label": "Cotizar servicio", "btn1_url": "/pages/contact",
-    "btn2_label": "Ver proyectos", "btn2_url": "#proyectos" } },
-  "about": { "type": "about-profile",
-    "settings": { "text": "<p>Soy Ingeniero en Informática y desarrollador junior enfocado en desarrollo web (JavaScript, React.js, HTML5 y CSS3) y bases de datos relacionales (SQL, MySQL, MariaDB).</p><p>He construido proyectos completos: levanto los requerimientos, diseño el modelo de datos e implemento la solución. Entre ellos está un sistema interno de gestión que desarrollé durante mi experiencia como tutor en un Centro Bolivariano de Informática y Telemática (CBIT) de Fundabit.</p><p>Uso ChatGPT, Claude, Gemini, DeepSeek, Copilot y Perplexity para desarrollar, depurar, documentar y aprender, y valido siempre los resultados. Manejo Git y GitHub para el control de versiones y el trabajo colaborativo.</p>" },
-    "blocks": {
-      "e1": { "type": "education", "settings": { "title": "Ingeniero en Informática (2025)", "detail": "Univ. Politécnica Territorial de Barlovento \"Argelia Laya\"" } },
-      "e2": { "type": "education", "settings": { "title": "Bachiller en Ciencias (2022)", "detail": "U.E.E. \"Argelia Laya\"" } } },
-    "block_order": ["e1","e2"] },
-  "projects": { "type": "featured-projects", "settings": { "heading": "Proyectos" }, "blocks": {
-    "p1": { "type": "project", "settings": { "name": "AdminPyme", "description": "Sistema de gestión integral para pequeñas y medianas empresas.", "stack": "Aplicación web en producción", "url": "https://admin-pyme-online.vercel.app/" } },
-    "p2": { "type": "project", "settings": { "name": "BarbApp", "description": "Sistema de gestión integral para barberías: administración de citas, gestión de clientes, elección de barbero, pagos en línea con Pago Móvil y programas de fidelización. Interfaz en tonos oscuros pensada para la experiencia del usuario.", "stack": "JavaScript · HTML/CSS · SQL", "url": "https://barbeapp.vercel.app/" } },
-    "p3": { "type": "project", "settings": { "name": "VenCom Manager", "description": "Sistema web para vendedores de ferias libres, food trucks y pequeños comerciantes. Lleva un control simple de ventas, inventario y movimientos del negocio, sin necesidad de conocimientos contables. Nació de un levantamiento de requerimientos centrado en sus necesidades reales.", "stack": "Aplicación web · Base de datos relacional" } },
-    "p4": { "type": "project", "settings": { "name": "CBIT Manager", "description": "Sistema integral de gestión administrativa creado en el CBIT de Fundabit. Digitaliza el registro de usuarios, el control de actividades y la información institucional, y reemplaza procesos manuales por un flujo ordenado respaldado en una base de datos relacional.", "stack": "Aplicación web · Base de datos relacional" } } },
-    "block_order": ["p1","p2","p3","p4"] },
-  "services": { "type": "services-grid", "blocks": {
-    "s1": { "type": "service", "settings": { "title": "Desarrollo web full stack", "text": "Sitios y aplicaciones con JavaScript, React.js, HTML5, CSS3 y bases de datos SQL." } },
-    "s2": { "type": "service", "settings": { "title": "Sistemas de gestión a la medida", "text": "Control de ventas, inventario, citas, clientes y procesos administrativos para pymes." } },
-    "s3": { "type": "service", "settings": { "title": "Diseño de bases de datos", "text": "Modelado y diseño de bases de datos relacionales en MySQL y MariaDB, con consultas SQL." } },
-    "s4": { "type": "service", "settings": { "title": "Levantamiento de requerimientos", "text": "Entiendo cómo trabaja tu negocio y lo convierto en una especificación clara antes de programar." } } },
-    "block_order": ["s1","s2","s3","s4"] },
-  "skills": { "type": "skills", "blocks": {
-    "k1": { "type": "group", "settings": { "title": "Habilidades técnicas", "items": "JavaScript, React.js, HTML5, CSS3, Java, Python, SQL, MySQL, MariaDB, Modelado de bases de datos, Git, GitHub, VS Code, Apache NetBeans, MySQL Workbench" } },
-    "k2": { "type": "group", "settings": { "title": "Inteligencia artificial", "items": "ChatGPT, Claude, Gemini, DeepSeek, Microsoft Copilot, Perplexity, Ingeniería de prompts", "note": "Uso en generación y revisión de código, depuración, consultas SQL, documentación técnica y prototipado rápido, con verificación crítica de las respuestas antes de integrarlas." } },
-    "k3": { "type": "group", "settings": { "title": "Habilidades blandas", "items": "Resolución de problemas, Adaptabilidad, Creatividad, Responsabilidad, Levantamiento de requerimientos, Aprendizaje continuo, Trabajo en equipo" } } },
-    "block_order": ["k1","k2","k3"] },
-  "experience": { "type": "experience", "blocks": {
-    "x1": { "type": "job", "settings": { "role": "Tutor de CBIT", "company": "Fundabit", "period": "1 año", "bullets": "Impartí formación en informática y uso de tecnología a la comunidad, apoyando el programa nacional de alfabetización tecnológica de Fundabit.\nParticipé en la creación de CBIT Manager, un sistema interno con base de datos relacional para digitalizar y ordenar la gestión administrativa del centro.\nBrindé soporte técnico básico y acompañamiento a usuarios en el uso de equipos y herramientas informáticas.\nApliqué herramientas de IA generativa para preparar material formativo y resolver dudas técnicas." } } },
-    "block_order": ["x1"] },
-  "process": { "type": "tech-process", "settings": { "tech_heading": "Tecnologías", "techs": "JavaScript, React.js, HTML5, CSS3, Java, Python, SQL, MySQL, MariaDB, Git, GitHub", "process_heading": "Cómo trabajo" }, "blocks": {
-    "t1": { "type": "step", "settings": { "title": "Requerimientos", "text": "Entiendo cómo funciona tu negocio y qué necesitas resolver." } },
-    "t2": { "type": "step", "settings": { "title": "Modelo de datos", "text": "Diseño la base de datos relacional antes de construir la interfaz." } },
-    "t3": { "type": "step", "settings": { "title": "Implementación", "text": "Construyo una solución funcional, con ayuda de IA y revisión propia." } },
-    "t4": { "type": "step", "settings": { "title": "Entrega", "text": "Despliegue y acompañamiento para que tu equipo pueda usarla." } } },
-    "block_order": ["t1","t2","t3","t4"] },
-  "contact": { "type": "contact-strip" } },
-  "order": ["hero","about","projects","services","skills","experience","process","contact"] }
+{
+ "sections": {
+  "hero": {
+   "type": "hero",
+   "settings": {
+    "btn1_url": "#proyectos"
+   },
+   "blocks": {
+    "h1": {
+     "type": "stat",
+     "settings": {
+      "value": "3+",
+      "label": "Proyectos reales"
+     }
+    },
+    "h2": {
+     "type": "stat",
+     "settings": {
+      "value": "1+",
+      "label": "Año de experiencia"
+     }
+    },
+    "h3": {
+     "type": "stat",
+     "settings": {
+      "value": "15+",
+      "label": "Tecnologías"
+     }
+    },
+    "h4": {
+     "type": "stat",
+     "settings": {
+      "value": "2",
+      "label": "Idiomas"
+     }
+    }
+   },
+   "block_order": [
+    "h1",
+    "h2",
+    "h3",
+    "h4"
+   ]
+  },
+  "about": {
+   "type": "about-profile",
+   "settings": {
+    "text": "<p>Soy Ingeniero en Informática y desarrollador junior enfocado en desarrollo web (JavaScript, React.js, HTML5 y CSS3) y bases de datos relacionales (SQL, MySQL, MariaDB).</p><p>He construido proyectos completos: levanto los requerimientos, diseño el modelo de datos e implemento la solución. Entre ellos está un sistema interno de gestión que desarrollé durante mi experiencia como tutor en un Centro Bolivariano de Informática y Telemática (CBIT) de Fundabit.</p><p>Uso ChatGPT, Claude, Gemini, DeepSeek, Copilot y Perplexity para desarrollar, depurar, documentar y aprender, y valido siempre los resultados. Manejo Git y GitHub para el control de versiones y el trabajo colaborativo.</p>"
+   },
+   "blocks": {
+    "e1": {
+     "type": "education",
+     "settings": {
+      "title": "Ingeniero en Informática (2025)",
+      "detail": "Univ. Politécnica Territorial de Barlovento \"Argelia Laya\""
+     }
+    },
+    "e2": {
+     "type": "education",
+     "settings": {
+      "title": "Bachiller en Ciencias (2022)",
+      "detail": "U.E.E. \"Argelia Laya\""
+     }
+    }
+   },
+   "block_order": [
+    "e1",
+    "e2"
+   ]
+  },
+  "projects": {
+   "type": "featured-projects",
+   "settings": {
+    "heading": "Proyectos"
+   },
+   "blocks": {
+    "p1": {
+     "type": "project",
+     "settings": {
+      "name": "AdminPyme",
+      "description": "Sistema de gestión integral para pequeñas y medianas empresas.",
+      "stack": "Aplicación web en producción",
+      "url": "https://admin-pyme-online.vercel.app/"
+     }
+    },
+    "p2": {
+     "type": "project",
+     "settings": {
+      "name": "BarbApp",
+      "description": "Sistema de gestión integral para barberías: administración de citas, gestión de clientes, elección de barbero, pagos en línea con Pago Móvil y programas de fidelización. Interfaz en tonos oscuros pensada para la experiencia del usuario.",
+      "stack": "JavaScript · HTML/CSS · SQL",
+      "url": "https://barbeapp.vercel.app/"
+     }
+    },
+    "p3": {
+     "type": "project",
+     "settings": {
+      "name": "VenCom Manager",
+      "description": "Sistema web para vendedores de ferias libres, food trucks y pequeños comerciantes. Lleva un control simple de ventas, inventario y movimientos del negocio, sin necesidad de conocimientos contables. Nació de un levantamiento de requerimientos centrado en sus necesidades reales.",
+      "stack": "Aplicación web · Base de datos relacional"
+     }
+    },
+    "p4": {
+     "type": "project",
+     "settings": {
+      "name": "CBIT Manager",
+      "description": "Sistema integral de gestión administrativa creado en el CBIT de Fundabit. Digitaliza el registro de usuarios, el control de actividades y la información institucional, y reemplaza procesos manuales por un flujo ordenado respaldado en una base de datos relacional.",
+      "stack": "Aplicación web · Base de datos relacional"
+     }
+    }
+   },
+   "block_order": [
+    "p1",
+    "p2",
+    "p3",
+    "p4"
+   ]
+  },
+  "services": {
+   "type": "services-grid",
+   "blocks": {
+    "s1": {
+     "type": "service",
+     "settings": {
+      "title": "Desarrollo web full stack",
+      "text": "Sitios y aplicaciones con JavaScript, React.js, HTML5, CSS3 y bases de datos SQL."
+     }
+    },
+    "s2": {
+     "type": "service",
+     "settings": {
+      "title": "Sistemas de gestión a la medida",
+      "text": "Control de ventas, inventario, citas, clientes y procesos administrativos para pymes."
+     }
+    },
+    "s3": {
+     "type": "service",
+     "settings": {
+      "title": "Diseño de bases de datos",
+      "text": "Modelado y diseño de bases de datos relacionales en MySQL y MariaDB, con consultas SQL."
+     }
+    },
+    "s4": {
+     "type": "service",
+     "settings": {
+      "title": "Levantamiento de requerimientos",
+      "text": "Entiendo cómo trabaja tu negocio y lo convierto en una especificación clara antes de programar."
+     }
+    }
+   },
+   "block_order": [
+    "s1",
+    "s2",
+    "s3",
+    "s4"
+   ]
+  },
+  "skills": {
+   "type": "skills",
+   "blocks": {
+    "k1": {
+     "type": "group",
+     "settings": {
+      "title": "Habilidades técnicas",
+      "items": "JavaScript, React.js, HTML5, CSS3, Java, Python, SQL, MySQL, MariaDB, Modelado de bases de datos, Git, GitHub, VS Code, Apache NetBeans, MySQL Workbench"
+     }
+    },
+    "k2": {
+     "type": "group",
+     "settings": {
+      "title": "Inteligencia artificial",
+      "items": "ChatGPT, Claude, Gemini, DeepSeek, Microsoft Copilot, Perplexity, Ingeniería de prompts",
+      "note": "Uso en generación y revisión de código, depuración, consultas SQL, documentación técnica y prototipado rápido, con verificación crítica de las respuestas antes de integrarlas."
+     }
+    },
+    "k3": {
+     "type": "group",
+     "settings": {
+      "title": "Habilidades blandas",
+      "items": "Resolución de problemas, Adaptabilidad, Creatividad, Responsabilidad, Levantamiento de requerimientos, Aprendizaje continuo, Trabajo en equipo"
+     }
+    }
+   },
+   "block_order": [
+    "k1",
+    "k2",
+    "k3"
+   ]
+  },
+  "experience": {
+   "type": "experience",
+   "blocks": {
+    "x1": {
+     "type": "job",
+     "settings": {
+      "role": "Tutor de CBIT",
+      "company": "Fundabit",
+      "period": "1 año",
+      "bullets": "Impartí formación en informática y uso de tecnología a la comunidad, apoyando el programa nacional de alfabetización tecnológica de Fundabit.\nParticipé en la creación de CBIT Manager, un sistema interno con base de datos relacional para digitalizar y ordenar la gestión administrativa del centro.\nBrindé soporte técnico básico y acompañamiento a usuarios en el uso de equipos y herramientas informáticas.\nApliqué herramientas de IA generativa para preparar material formativo y resolver dudas técnicas."
+     }
+    }
+   },
+   "block_order": [
+    "x1"
+   ]
+  },
+  "process": {
+   "type": "tech-process",
+   "settings": {
+    "tech_heading": "Tecnologías",
+    "techs": "JavaScript, React.js, HTML5, CSS3, Java, Python, SQL, MySQL, MariaDB, Git, GitHub",
+    "process_heading": "Cómo trabajo"
+   },
+   "blocks": {
+    "t1": {
+     "type": "step",
+     "settings": {
+      "title": "Requerimientos",
+      "text": "Entiendo cómo funciona tu negocio y qué necesitas resolver."
+     }
+    },
+    "t2": {
+     "type": "step",
+     "settings": {
+      "title": "Modelo de datos",
+      "text": "Diseño la base de datos relacional antes de construir la interfaz."
+     }
+    },
+    "t3": {
+     "type": "step",
+     "settings": {
+      "title": "Implementación",
+      "text": "Construyo una solución funcional, con ayuda de IA y revisión propia."
+     }
+    },
+    "t4": {
+     "type": "step",
+     "settings": {
+      "title": "Entrega",
+      "text": "Despliegue y acompañamiento para que tu equipo pueda usarla."
+     }
+    }
+   },
+   "block_order": [
+    "t1",
+    "t2",
+    "t3",
+    "t4"
+   ]
+  },
+  "contact": {
+   "type": "contact-strip"
+  }
+ },
+ "order": [
+  "hero",
+  "about",
+  "projects",
+  "services",
+  "skills",
+  "experience",
+  "process",
+  "contact"
+ ]
+}

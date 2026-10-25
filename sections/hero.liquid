@@ -1,32 +1,61 @@
+{%- if section.settings.cv_url != blank -%}{%- assign cv = section.settings.cv_url -%}{%- else -%}{%- assign cv = 'CV_Eddy_Pacheco.pdf' | asset_url -%}{%- endif -%}
 <section class="hero">
   <div class="wrap hero__grid">
-    <div>
-      <h1>{{ section.settings.title }}</h1>
-      <p class="lead">{{ section.settings.subtitle }}</p>
+    <div class="hero__text">
+      <h1>{{ section.settings.greeting }} <span class="grad">{{ section.settings.name }}</span></h1>
+      <p class="role">{{ section.settings.role }}</p>
+      <p class="quote">“{{ section.settings.quote }}”</p>
+      <p class="specialty"><span class="muted">Especialidad:</span> {{ section.settings.specialty }}</p>
+      <p class="loc">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        {{ section.settings.location }}
+      </p>
       <div class="actions">
         {% render 'button', url: section.settings.btn1_url, label: section.settings.btn1_label %}
-        {% render 'button', url: section.settings.btn2_url, label: section.settings.btn2_label, style: 'ghost' %}
+        <a class="btn btn--outline" href="{{ cv }}" download target="_blank" rel="noopener">{{ section.settings.btn2_label }}</a>
       </div>
+      <ul class="stats">
+        {% for block in section.blocks %}
+          <li class="stat" {{ block.shopify_attributes }}><strong class="grad">{{ block.settings.value }}</strong><span>{{ block.settings.label }}</span></li>
+        {% endfor %}
+      </ul>
     </div>
-    <div class="hero__card card">
-      <h2>{{ section.settings.name }}</h2>
-      <p class="muted">{{ section.settings.role }}</p>
-      <ul class="chips">{% assign tags = section.settings.tags | split: ',' %}{% for t in tags %}<li>{{ t | strip }}</li>{% endfor %}</ul>
+    <div class="hero__visual">
+      <span class="shape shape--a" aria-hidden="true"></span>
+      <span class="shape shape--b" aria-hidden="true"></span>
+      <div class="photo">
+        {% if section.settings.photo %}
+          {{ section.settings.photo | image_url: width: 900 | image_tag: loading: 'eager', alt: section.settings.name }}
+        {% else %}
+          <div class="photo__empty"><span>{{ section.settings.name | split: ' ' | first | slice: 0, 1 }}{{ section.settings.name | split: ' ' | last | slice: 0, 1 }}</span><small>Sube tu foto en Personalizar</small></div>
+        {% endif %}
+      </div>
+      <span class="chip chip--1" aria-hidden="true">{{ section.settings.chip1 }}</span>
+      <span class="chip chip--2" aria-hidden="true">{{ section.settings.chip2 }}</span>
+      <span class="chip chip--3" aria-hidden="true">{{ section.settings.chip3 }}</span>
     </div>
   </div>
 </section>
 {% schema %}
 { "name": "Hero",
   "settings": [
-    { "type": "text", "id": "title", "label": "Titular", "default": "Software a la medida que tu negocio puede usar desde el primer día" },
-    { "type": "textarea", "id": "subtitle", "label": "Subtítulo", "default": "Sistemas de gestión y aplicaciones web para pymes: desde el levantamiento de requerimientos hasta la entrega." },
+    { "type": "text", "id": "greeting", "label": "Saludo", "default": "Hola, soy" },
     { "type": "text", "id": "name", "label": "Nombre", "default": "Eddy Pacheco" },
-    { "type": "text", "id": "role", "label": "Cargo", "default": "Ingeniero en Informática · Desarrollador de Software Junior" },
-    { "type": "text", "id": "tags", "label": "Etiquetas separadas por comas", "default": "Desarrollo web, React.js, Bases de datos relacionales, IA aplicada al desarrollo" },
-    { "type": "text", "id": "btn1_label", "label": "Botón 1", "default": "Cotizar servicio" },
-    { "type": "url", "id": "btn1_url", "label": "Enlace botón 1" },
-    { "type": "text", "id": "btn2_label", "label": "Botón 2", "default": "Ver proyectos" },
-    { "type": "url", "id": "btn2_url", "label": "Enlace botón 2" }
+    { "type": "text", "id": "role", "label": "Cargo", "default": "Ingeniero en Informática | Desarrollador de Software Junior" },
+    { "type": "text", "id": "quote", "label": "Frase", "default": "Si tienes una gran idea, ven y hablemos; la crearemos juntos." },
+    { "type": "text", "id": "specialty", "label": "Especialidad", "default": "Desarrollo Web · Bases de Datos Relacionales · IA Aplicada" },
+    { "type": "text", "id": "location", "label": "Ubicación", "default": "Acevedo, Miranda, Venezuela" },
+    { "type": "image_picker", "id": "photo", "label": "Tu foto (idealmente con fondo claro)" },
+    { "type": "text", "id": "btn1_label", "label": "Botón principal", "default": "Ver proyectos" },
+    { "type": "text", "id": "btn1_url", "label": "Enlace botón principal", "default": "#proyectos" },
+    { "type": "text", "id": "btn2_label", "label": "Botón del CV", "default": "Descargar CV (PDF)" },
+    { "type": "url", "id": "cv_url", "label": "URL del CV (vacío = el PDF incluido en el tema)" },
+    { "type": "text", "id": "chip1", "label": "Etiqueta flotante 1", "default": "{ react: true }" },
+    { "type": "text", "id": "chip2", "label": "Etiqueta flotante 2", "default": "</>" },
+    { "type": "text", "id": "chip3", "label": "Etiqueta flotante 3", "default": "SELECT * FROM proyectos;" }
   ],
+  "blocks": [ { "type": "stat", "name": "Estadística", "settings": [
+    { "type": "text", "id": "value", "label": "Valor" }, { "type": "text", "id": "label", "label": "Etiqueta" } ] } ],
+  "max_blocks": 4,
   "presets": [ { "name": "Hero" } ] }
 {% endschema %}
